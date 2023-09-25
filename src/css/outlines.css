@@ -509,8 +509,8 @@ main {
     align-items: center; 
     padding: 40px;
     border-radius: 10px;
-    background: rgb(188,53,194);
-    background: linear-gradient(90deg, rgba(188,53,194,1) 0%, rgba(164,174,204,1) 46%, rgba(72,189,205,1) 100%);
+    background: rgb(170,65,24);
+    background: radial-gradient(circle, rgba(170,65,24,1) 0%, rgba(169,214,219,1) 100%);
     -webkit-box-shadow: 5px 5px 5px -5px rgba(77, 148, 202, 0.6);
     -moz-box-shadow: 5px 5px 5px -5px rgba(77, 148, 202, 0.6);
     box-shadow: 5px 5px 5px -5px rgba(77, 148, 202, 0.6);
