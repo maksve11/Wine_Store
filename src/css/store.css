@@ -1,0 +1,155 @@
+/* Стили для магазина */
+.shop-container {
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: flex-start; 
+}
+
+/* Стили для контейнера dashboard */
+.dashboard {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px; 
+    position: sticky; 
+    top: 0; 
+}
+
+/* Стили для заголовка */
+.dashboard h2 {
+    font-family: "Monotype Corsiva", bold;
+    user-select: none;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #00CED1;
+}
+
+/* Стили для фильтров */
+.filter {
+    margin-bottom: 20px;
+}
+
+.filter h3 {
+    font-family: "Monotype Corsiva", cursive;
+    user-select: none;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #00CED1;
+}
+
+/* Стили для кнопок */
+.filter button {
+    font-family: "Monotype Corsiva", monospace;
+    font-size: 20px;
+    background-color: #00BFFF;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: left; 
+}
+
+.filter button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для списков */
+.filter ul {
+    color: #00BFFF;
+    font-family: "Monotype Corsiva", cursive;
+    list-style: none;
+    padding: 0;
+    display: none; 
+}
+
+.filter ul li {
+    color: #00BFFF;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+/* Стили для ползунков и значений */
+input[type="range"] {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Стили для звездочек рейтинга */
+.star {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/empty_star.png'); 
+    background-size: cover;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.star.highlighted {
+    background-image: url('../img/filled_star.png');
+}
+
+.product-list {
+    flex-grow: 1; 
+    padding: 0; 
+}
+
+/* Стили для контейнера */
+.product-list {
+    text-align: left;
+    background-color: #fff;
+    margin-bottom: 0;
+}
+
+/* Стили для заголовков */
+.product-list h1 {
+    font-size: 64px;
+    font-family: "Monotype Corsiva", cursive;
+    user-select: none;
+}
+
+.product-list h2 {
+    font-size: 30px;
+    margin-top: 5px;
+    font-family: "Monotype Corsiva", cursive;
+    padding-top: 30px;
+    user-select: none;
+}
+
+/* Стили для элементов товаров */
+.item-1 {
+    display: inline-block;
+    margin: 20px;
+    text-align: left;
+    max-width: 40%; 
+}
+
+.item-1 img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: -20px;
+}
+
+.item-info-1 {
+    text-align: left;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.item-1 h2 {
+    margin: 0;
+}
+
+.item-1 p {
+    margin: 5px 0;
+}
+
+.item-1 button {
+    width: 50%;
+}

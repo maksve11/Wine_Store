@@ -1,0 +1,721 @@
+/* Курсив */
+@font-face {
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-weight: normal;
+    src: local('Crimson Text'),
+        url('/fonts/CrimsonText-Italic.woff2') format('woff2'), 
+        url('/fonts/CrimsonText-Italic.woff') format('woff'),
+        url('/fonts/CrimsonText-Italic.ttf') format('ttf'),
+        url('/fonts/CrimsonText-Italic.eot') format('eot');
+}
+
+/* Стили для body */
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* Стили для header */
+header {
+    background-color: #fff;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+/* Стили для nav bar collapse */
+.header-menu-collapse {
+    position: relative;
+}
+
+.navbar-toggles {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+}
+
+.nav-icons {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #000; 
+    margin: 6px auto; 
+}
+
+.nav-icons::before,
+.nav-icons::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #00CED1; 
+    margin: 6px auto; 
+}
+
+/* Стили для анимации кнопки */
+.navbar-toggles.active .nav-icons::before {
+    transform: translateY(8px) rotate(45deg);
+    outline: none;
+}
+
+.navbar-toggles.active .nav-icons::after {
+    transform: translateY(-8px) rotate(-45deg);
+    outline: none;
+}
+
+/* Стиль для кнопки "X" (для закрытия меню) */
+.close-button {
+    color: #00CED1;
+    display: none; 
+    position: absolute;
+    top: 10px; 
+    right: 20px; 
+    cursor: pointer;
+    font-size: 50px; 
+}
+
+/* Стиль для кнопки "X" при активном меню */
+.menu-navbar-collapse.active .close-button {
+    display: block; 
+}
+
+/* Определение анимации для появления меню */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Стиль для выпадающего меню */
+.menu-navbar-collapse.collapsed-menu .navbar-collapse-menu {
+    display: none;
+    position: fixed;
+    left: 100%;
+    top: 0; 
+    width: 25%; 
+    height: 100%; 
+    max-height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); 
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    overflow-y: auto; 
+    opacity: 0.5; 
+    transform: translateX(-100%); 
+    animation: slideInLeft 1s ease forwards; 
+}
+
+/* Изменения для отображения меню рядом с кнопкой */
+.menu-navbar-collapse.collapsed-menu.active .navbar-collapse-menu {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 120; 
+    width: 25%; 
+    height: 100%;
+    max-height: 100%; 
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+/* Показываем меню при активации и скрываем кнопку "X" */
+.menu-navbar-collapse.active .navbar-collapse-menu {
+    display: block;
+    outline: none;
+}
+
+.menu-navbar-collapse.active .close-button {
+    display: none;
+}
+
+/* Стиль для контейнера кнопки "☰" */
+.menu-navbar-collapse.collapsed-menu .menu-toggle-button {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+/* Стиль для контейнера с элементами меню */
+.menu-list-container {
+    float: left;
+    margin-top: 60px;
+}
+
+/* Стиль для кнопки ☰ */
+.menu-toggle-button {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.menu-toggle-button::-moz-focus-inner,
+.menu-toggle-button:focus {
+    outline: none;
+    border: none;
+}
+
+/* Скрываем кнопку ☰ при активации меню */
+.menu-navbar-collapse.active .menu-toggle-button {
+    display: none;
+}
+
+/* Стиль для контейнера списка меню */
+.menu-toggle-container {
+    float: left; 
+    margin-right: 20px; 
+}
+
+/* Стиль для списка в меню */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+}
+
+/* Стиль для элементов меню */
+.menu-list li {
+    margin: 10px 0;
+    padding: 5px; 
+    transition: color 0.2s ease; 
+    text-align: left; 
+    outline: none;
+    border: none;
+}
+
+/* Стиль для ссылок в меню */
+.menu-list li a {
+    text-decoration: none;
+    font-family: 'Crimson Text';
+    font-style: italic;
+    color: #4682B4;
+    display: block;
+    font-size: 20px; 
+    padding-left: 5px;
+}
+
+.menu-list li a:hover,
+.menu-list li a:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* Показываем меню при активации */
+.menu-navbar-collapse.active .navbar-collapse-menu {
+    display: block;
+    width: 100%; 
+}
+
+/* Подсветка элемента меню при наведении */
+.menu-list li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Стили для активной кнопки в меню */
+.menu-item-link[aria-current="page"] {
+    color: #00BFFF; 
+    outline: none; 
+    text-decoration: underline;
+}
+
+/* Стили для названия */
+.title {
+    font-size: 54px;
+    margin: 0;
+    font-family: "Monotype Corsiva", bold;
+    padding: 0;
+    color: #00CED1;
+    user-select: none;
+    margin-right: 200px; 
+    min-width: 100px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+/* Стили для навигации */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav li:last-child {
+    margin-right: 0;
+}
+
+/* Стили для ссылок в навигации */
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Стили для общего контейнера иконок */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+/* Стили для общего класса ссылок */
+.favorite-link,
+.shopping-basket-link {
+    text-decoration: none;
+    color: #333; 
+    text-align: center;
+    margin: 0 20px; 
+    position: relative; 
+}
+
+/* Стили для псевдоэлемента ::after */
+.favorite-link::after {
+    content: "Избранное"; 
+    position: absolute;
+    top: -20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: #333; 
+    color: #fff; 
+    padding: 5px 10px;
+    border-radius: 5px; 
+    opacity: 0; 
+    pointer-events: none; 
+    transition: opacity 0.3s ease; 
+}
+
+/* Стили для класса ссылки при наведении */
+.favorite-link:hover {
+    color: #ff0000; 
+}
+
+/* Показываем текст при наведении */
+.favorite-link:hover::after {
+    opacity: 1;
+}
+
+/* Стили для общего класса изображений */
+.favorite-link img,
+.shopping-basket-link img {
+    width: 30px; 
+    height: auto; 
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    right: 0; 
+    top: 100px; 
+    transform: translateY(-100%); 
+    position: absolute;
+    width: 20%; 
+    z-index: 3;
+    text-align: center; 
+    padding: 0; 
+    -webkit-box-shadow: 12px 15px 18px -5px rgba(193,167,232,1);
+    -moz-box-shadow: 12px 15px 18px -5px rgba(193,167,232,1);
+    box-shadow: 12px 15px 18px -5px rgba(193,167,232,1);
+    transform: translateX(-50%); 
+    transition: transform 0.3s ease; 
+    pointer-events: auto; 
+}
+
+/* Стили для открытого модального окна */
+.modal.active {
+   transform: translateY(0); 
+}
+
+/* Стили для содержимого модального окна */
+.modal-content {
+    background-color: #dff5f0;
+    padding: 20px;
+    box-shadow: 12px 15px 18px -5px rgba(193,167,232,1);
+    position: relative;
+}
+
+/* Стили для текста внутри модального окна */
+.modal-content h2,
+.modal-content ul li {
+    color: #4682B4; 
+}
+
+/* Стили для списка товаров в корзине */
+#basket-items {
+    list-style: none;
+    padding: 0;
+}
+
+/* Стили для элементов списка */
+#basket-items li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#basket-items img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-left: 40px; 
+    vertical-align: middle;
+}
+
+/* Стили для названия */
+#basket-items li span {
+    font-size: 18px;
+    color: #4682B4;
+    margin-right: 20px;
+}
+
+/* Стили для кнопки закрытия модального окна */
+.close-button-basket {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 40px;
+    cursor: pointer;
+    color: #00CED1; 
+    z-index: 4;
+}
+
+/* Стили для кнопки закрытия при наведении */
+.close-button-basket:hover {
+    color: #ff0000; 
+}
+
+/* Стили для ссылок */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для h1 в header */
+header h1 {
+    font-size: 36px;
+}
+
+/* Стили для main */
+main {
+    padding: 20px;
+}
+
+/* Стили для контейнера слайдера */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Стили для слайдов */
+.slide {
+    display: none;
+    user-select: none;
+    white-space: pre;
+    font-family: monospace;
+    font-size: 12px;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    text-align: center; 
+}
+
+/* Стиль для виджета */
+.widget-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    width: 100%; 
+    margin: 0 auto;
+    text-align: center;
+    position: relative; 
+    left: -20px; 
+    user-select: none;
+}
+
+/* Стиль для изображения в виджете */
+.widget-image {
+    width: 100%; 
+    height: 720px; 
+    object-fit: cover; 
+    filter: blur(5px); 
+}
+
+/* Стиль для контента в виджете */
+.widget--content {
+    text-align: center;
+    background: rgb(231,208,232);
+    background: linear-gradient(90deg, rgba(231,208,232,1) 0%, rgba(221,206,181,1) 46%, rgba(205,92,54,1) 100%);
+    padding: 24px;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    border-radius: 15px; 
+}
+
+/* Стиль для заголовка */
+.widget-title {
+    font-family: "Monotype Corsiva", bold;
+    font-size: 34px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Стиль для текста */
+.widget-text {
+    font-family: "Monotype Corsiva", cursive;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Стиль для контейнера виджета */
+.widget-content-2 {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    align-items: center; 
+    padding: 40px;
+    border-radius: 10px;
+    background: rgb(188,53,194);
+    background: linear-gradient(90deg, rgba(188,53,194,1) 0%, rgba(164,174,204,1) 46%, rgba(72,189,205,1) 100%);
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(77, 148, 202, 0.6);
+    -moz-box-shadow: 5px 5px 5px -5px rgba(77, 148, 202, 0.6);
+    box-shadow: 5px 5px 5px -5px rgba(77, 148, 202, 0.6);
+    filter: blur(7px); 
+    transition: filter 0.3s ease; 
+}
+
+/* Добавляем размытие при наведении */
+.widget-content-2:hover {
+    filter: none; 
+}
+
+/* Стиль для заголовка группы услуг */
+.service-heading {
+    font-family: 'Crimson Text';
+    font-style: bold;
+    color: #000;
+    font-size: 36px;
+    margin-bottom: 18%;
+    user-select: none;
+}
+
+/* Стиль для правой колонки */
+.right-column {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    gap: 20px; 
+    margin-left: 56%;
+}
+
+/* Стиль для элементов услуг */
+.service-name {
+    font-family: 'Crimson Text';
+    font-style: italic;
+    font-size: 24px;
+}
+
+/* Стили для контейнера */
+.featured-items-container {
+    text-align: center;
+    background-color: #F5F5F5;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.featured-items-container.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
+}
+
+/* Стили для заголовков */
+.featured-items-container h1 {
+    font-size: 64px;
+    font-family: "Monotype Corsiva", cursive;
+    user-select: none;
+}
+
+.featured-items-container h2 {
+    font-size: 30px;
+    margin-top: 5px;
+    font-family: "Monotype Corsiva", cursive;
+    padding-top: 30px;
+    user-select: none;
+}
+
+/* Стили для элементов товаров */
+.item {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    max-width: 40%; 
+}
+
+.item img {
+    max-width: 100%;
+    height: 540px;
+    border-radius: 10px;
+    margin-bottom: -20px;
+}
+
+.item-info {
+    text-align: left;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.item h2 {
+    margin: 0;
+}
+
+.item p {
+    margin: 5px 0;
+}
+
+/* Стили для кнопки */
+button {
+    background-color: #00CED1;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для контейнера цитаты */
+.quote {
+    text-align: center;
+    background-image: url("../img/wine_for_citate.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 360px;
+    color: #FFFACD;
+    border: none;
+    width: 100%;
+    margin-left: 0px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    user-select: none;
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.quote.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateX(0%);
+}
+
+/* Стили для текста цитаты */
+.quote p {
+    font-size: 36px; 
+    font-family: "Monotype Corsiva", cursive; 
+    margin: 0; 
+    padding: 20px; 
+}
+
+.quote strong {
+    display: block; 
+    font-size: 54px; 
+    font-family: "Monotype Corsiva", cursive;
+    margin-bottom: 20px; 
+}
+
+.quote em {
+    font-family: "Monotype Corsiva", monospace;
+    font-style: italic; 
+    font-size: 36px; 
+}
+
+/* Стили для footer-контейнера */
+footer {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5F5F5; 
+    color: #00CED1; 
+    padding: 10px 20px;
+}
+
+/* Стили для левой части footer */
+.footer-left a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #00CED1;
+}
+
+.footer-left img {
+    width: 100px; 
+    height: 100px;
+    margin-right: 5px; 
+    border-radius: 50%;
+}
+
+/* Стили для центральной части footer */
+.footer-center {
+    flex-grow: 1; 
+    text-align: center;
+    margin: 50px 50px;
+    user-select: none;
+}
+
+/* Стили для правой части footer */
+.footer-right a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-right img {
+    width: 70px; 
+    height: 70px;
+    margin-left: 5px; 
+}

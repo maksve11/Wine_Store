@@ -1,0 +1,246 @@
+/* Стили для контейнера, который будет занимать всю страницу */
+.about-us-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    margin: 0;
+}
+
+/* Стили для картинки */
+.about-us-img {
+    width: 100%; 
+    max-height: 240px; 
+}
+
+/* Стили для формулы успеха */
+.formula {
+    text-align: center;
+    width: 100%; 
+    margin: 5% auto; 
+    user-select: none;
+    filter: blur(7px); 
+    transition: filter 0.3s ease; 
+}
+
+/* Добавляем размытие при наведении */
+.formula:hover {
+    filter: none; 
+}
+
+.formula strong {
+    font-weight: bold;
+    font-size: 28px; 
+    font-family: "Monotype Corsiva", bold;
+}
+
+.formula sup {
+    font-style: italic;
+    font-family: "Monotype Corsiva", cursive;
+    font-size: 24px; 
+}
+
+.formula del {
+    text-decoration: line-through;
+    font-family: "Monotype Corsiva", monospace;
+    font-size: 24px; 
+}
+
+.formula sub {
+    text-decoration: underline;
+    font-family: "Monotype Corsiva", serif;
+    font-size: 24px; 
+}
+
+/* Стили для контейнера about-us-container-1 */
+.about-us-container-1 {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    margin-top: 0;
+    background-color: #FFEFD5;
+    padding: 20px;
+    user-select: none;
+}
+
+/* Стили для блока с текстом слева */
+.about-us-container-1 .about-us-text {
+    flex: 1;
+    font-family: "Monotype Corsiva", cursive;
+    padding: 10px;
+    background-color: #FFEFD5;
+    text-align: left; 
+    margin-left: 10%;
+    width: 35%;
+}
+
+.about-us-container-1 .about-us-text h1 {
+    font-size: 48px;
+    margin-top: 0;
+}
+
+.about-us-container-1 .about-us-text p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Стили для блока с изображениями справа */
+.about-us-container-1 .about-us-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px;
+    width: 65%;
+}
+
+/* Стили для пары изображений */
+.about-us-container-1 .image-pair {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-left: 30%;
+}
+
+.about-us-container-1 .image-pair img {
+    width: 49%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Стиль для бесконечной ленты */
+.slider-container-about-us {
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.slider-container-about-us.element-show {
+    opacity: 1;
+    transition: all 2s;
+    transform: translateY(0%);
+}
+
+.slider-container-about-us h2 {
+    font-family: "Monotype Corsiva", cursive;
+    font-size: 36px;
+    margin-left: 10%;
+    margin-top: 100px;
+}
+
+.slider-about-us {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  width: 1920px; 
+}
+
+.slide-about-us {
+  flex: 0 0 360px; 
+  height: 480px; 
+  margin-right: 20px; 
+  overflow: hidden;
+  margin-bottom: 100px;
+  background-color: #000;
+}
+
+.slide-about-us img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1440px);
+  }
+}
+
+/* Стили для контейнера подписки */
+.subscribe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.subscribe-container.element-show {
+    opacity: 1;
+    transition: all 2s;
+    transform: translateY(0%);
+}
+
+/* Стили для текста подписки */
+.subscribe-text {
+    flex: 1;
+    margin-left: 10%;
+}
+
+.subscribe-text h2 {
+    font-family: "Monotype Corsiva", cursive;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subscribe-text h1 {
+    font-family: "Monotype Corsiva", serif;
+    font-size: 22px;
+    color: #333;
+}
+
+/* Стили для контейнера ввода email и кнопки */
+.subscribe-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-left: 20%;
+}
+
+/* Стили для поля ввода email */
+.subscribe-input input[type="email"] {
+    width: 70%;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.subscribe-input input[type="email"]:focus {
+    border-color: #007bff;
+}
+
+/* Стили для кнопки "Отправить" */
+.subscribe-input button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: -30%; 
+}
+
+/* Стили для значка внутри кнопки */
+.subscribe-input button img {
+    width: 45px;
+    height: 45px;
+}
+
+/* Стили для сообщения об ошибке */
+.error-message {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 14px;
+    color: #ff0000;
+    display: none;
+}
+
+.subscribe-input input[type="email"].invalid + .error-message {
+    display: block;
+}

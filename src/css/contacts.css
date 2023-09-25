@@ -1,0 +1,168 @@
+/* Стиль для формы */
+.contacts-form-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    width: 100%; 
+    margin: 0 auto;
+    text-align: center;
+    position: relative; 
+    left: -20px; 
+    user-select: none;
+}
+
+/* Стиль для изображения в формы */
+.contacts-form-image {
+    width: 100%; 
+    height: 720px; 
+    object-fit: cover; 
+    filter: blur(5px); 
+}
+
+/* Стиль для контента в формы */
+.info-form {
+    background-size: 100% auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    position: absolute;
+    top: 33%; 
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -30%); 
+    border-radius: 5px; 
+}
+
+/* Стиль для заголовка */
+.info-form-title {
+    font-family: "Monotype Corsiva", bold;
+    font-size: 34px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Стиль для текста */
+.info-form-text {
+    font-family: "Monotype Corsiva", cursive;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Стиль для формы */
+form {
+    font-family: "Monotype Corsiva", cursive;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Стиль для полей ввода и меток */
+label {
+    font-family: "Monotype Corsiva", monospace;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Стиль для кнопки отправки */
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Стиль для ошибок валидации */
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+}
+
+/* Стиль для успешного сообщения */
+.success-message {
+    color: #008000;
+    font-size: 14px;
+}
+
+/* Стиль для контактов */
+.contact-info {
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.contact-info.element-show {
+    opacity: 1;
+    transition: all 3s;
+    transform: translateX(0%);
+}
+
+.contact-info-left {
+    font-family: "Monotype Corsiva", cursive;
+    flex: 1;
+    background: rgb(214,19,109);
+    background: linear-gradient(90deg, rgba(214,19,109,1) 0%, rgba(213,72,108,1) 46%, rgba(159,219,227,1) 100%);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info-right {
+    font-family: "Monotype Corsiva", cursive;
+    flex: 1;
+    background: rgb(217,194,218);
+    background: linear-gradient(90deg, rgba(217,194,218,1) 0%, rgba(118,148,238,1) 46%, rgba(45,92,98,1) 100%);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для заголовков и текста */
+.contact-info-left h1, .contact-info-left h2, .contact-info-left h3 {
+    margin: 10px;
+    padding: 10px;
+}
+
+.contact-info-right h1, .contact-info-right h2, .contact-info-right h3 {
+    margin: 10px;
+    padding: 0px;
+}
+
+.contact-info-left h1, .contact-info-right h1 {
+    font-size: 32px;
+}
+
+.contact-info-left h2, .contact-info-right h2 {
+    font-size: 26px;
+}
+
+.contact-info-left h3, .contact-info-right h3 {
+    font-size: 18px;
+    margin-top: 5px;
+}
