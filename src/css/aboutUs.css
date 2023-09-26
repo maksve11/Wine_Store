@@ -195,7 +195,7 @@
 }
 
 /* Стили для контейнера ввода email и кнопки */
-.subscribe-input {
+.subscribe-email {
     flex: 1;
     display: flex;
     align-items: center;
@@ -204,7 +204,7 @@
 }
 
 /* Стили для поля ввода email */
-.subscribe-input input[type="email"] {
+.subscribe-email input[type="email"] {
     width: 70%;
     padding: 20px;
     border: 2px solid #ccc;
@@ -213,12 +213,12 @@
     outline: none;
 }
 
-.subscribe-input input[type="email"]:focus {
+.subscribe-email input[type="email"]:focus {
     border-color: #007bff;
 }
 
 /* Стили для кнопки "Отправить" */
-.subscribe-input button {
+.subscribe-email button {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -226,7 +226,7 @@
 }
 
 /* Стили для значка внутри кнопки */
-.subscribe-input button img {
+.subscribe-email button img {
     width: 45px;
     height: 45px;
 }
