@@ -69,7 +69,7 @@ label {
 }
 
 input[type="text"],
-input[type="email"],
+input[type="email-form"],
 input[type="tel"],
 textarea {
     width: 70%;

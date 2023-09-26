@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var subscribeForm = document.getElementById('subscribe-email');
+    var subscribeForm = document.getElementById('subscribe-form-email');
     var emailInput = document.getElementById('email');
     var errorMessage = document.querySelector('.error-message');
 
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         };
 
-        fetch('https://my-json-server.typicode.com/maksve11/Wine_Store/posts', options)
+        fetch('https://my-json-server.typicode.com/maksve11/Wine_Store/posts/', options)
             .then(function (response) {
                 if (response.ok) {
                     return response.json();
