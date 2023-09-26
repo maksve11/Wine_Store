@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     var form = document.querySelector('form');
     var phoneInput = document.getElementById('phone');
-    var emailInput = document.getElementById('email');
+    var emailInput = document.getElementById('email-form');
     var errorMessage = document.querySelector('.error-message');
     var successMessage = document.querySelector('.success-message');
 
