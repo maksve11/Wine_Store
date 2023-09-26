@@ -50,7 +50,7 @@
 }
 
 /* Стиль для формы */
-form {
+.info-form form {
     font-family: "Monotype Corsiva", cursive;
     max-width: 400px;
     margin: 0 auto;
@@ -61,17 +61,17 @@ form {
 }
 
 /* Стиль для полей ввода и меток */
-label {
+.info-form label {
     font-family: "Monotype Corsiva", monospace;
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email-form"],
-input[type="tel"],
-textarea {
+.info-form input[type="text"],
+.info-form input[type="email-form"],
+.info-form input[type="tel"],
+.info-form textarea {
     width: 70%;
     padding: 10px;
     margin-bottom: 10px;
@@ -82,7 +82,7 @@ textarea {
 }
 
 /* Стиль для кнопки отправки */
-button {
+.info-form button {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -91,7 +91,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.info-form button:hover {
     background-color: #0056b3;
 }
 
