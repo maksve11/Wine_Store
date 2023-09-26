@@ -22,7 +22,11 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        errorMessage.textContent = '';
-        successMessage.textContent = 'Данные отправлены успешно!';
+        if (errorMessage) {
+            errorMessage.textContent = '';
+        }
+        if (successMessage) {
+            successMessage.textContent = 'Данные отправлены успешно!';
+        }
     });
 });
