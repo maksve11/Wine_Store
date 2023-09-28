@@ -130,7 +130,7 @@ input[type="range"] {
 }
 
 .item-1 img {
-    max-width: 90%;
+    max-width: 50%;
     height: auto;
     border-radius: 10px;
     margin-bottom: -20px;
