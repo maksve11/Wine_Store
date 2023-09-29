@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="алкоголь, интернет магазин, элитный алкоголь">
-    <meta name="description" content="Интернет-магазин элитного алкоголя. Широкий ассортимент алкогольных напитков высокого качества.">
+    <meta name="description" content="Интернет-магазин элитного алкоголя. Широкий ассортимент алкогольных напитков высокого качества. и немного сыра к нему">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Store</title>
     <link rel="stylesheet" type="text/css" href="../css/outlines.css">
@@ -59,14 +59,9 @@
                <span class="close-button-basket" id="close-basket-modal">&times;</span>
                 <h2>Корзина</h2>
                     <ul id="basket-items">
-                        <li>
-                            <img src="../img/vinishko1.jpeg">
-                            <span>Трамонто Испания 1988</span>
-                        </li>
-                        <li>
-                            <img src="../img/vinishko2.jpeg">
-                            <span>Кубанское Белое 2001</span>
-                        </li>
+                        <div class="empty-basket">
+                            <p>Здесь пока ничего нет</p>
+                        </div>
                     </ul>
             </div>
         </div>
@@ -84,6 +79,15 @@
                     <li><a href="#">Gallo</a></li>
                     <li><a href="#">Changyu</a></li>
                     <li><a href="#">Yellow Tail</a></li>
+                </ul>
+            </div>
+            <div class="filter" id="countryFilter">
+                <button id="countryButton">Страна Происхождения</button>
+                <ul id="countryList">
+                    <li><a href="#">Франция</a></li>
+                    <li><a href="#">Италия</a></li>
+                    <li><a href="#">Испания</a></li>
+                    <li><a href="#">Россия</a></li>
                 </ul>
             </div>
             <div class="filter" id="typeFilter">
@@ -119,20 +123,40 @@
                 <div class="item-1">
                     <img src="../img/wine_for_sale.jpg" alt="Товар 1">
                     <div class="item-info-1">
-                        <h2>Vina Albali Rose</h2>
+                        <h2>Terras De Santa Maria</h2>
                         <p>Цена: $99.99</p>
                     </div>
                     <button>Добавить в корзину</button>
                 </div>
                 <div class="item-1">
-                    <img src="../img/wine_for_sale_2.jpg" alt="Товар 2">
+                    <img src="../img/wine_for_sale_1.jpg" alt="Товар 1">
                     <div class="item-info-1">
-                        <h2>Sauvignon Blanc</h2>
+                        <h2>Rongopai Marlboro</h2>
+                        <p>Цена: $169.99</p>
+                    </div>
+                    <button>Добавить в корзину</button>
+                </div>
+                <div class="item-1">
+                    <img src="../img/wine_for_sale_3.jpg" alt="Товар 2">
+                    <div class="item-info-1">
+                        <h2>Abrigo Da Ribeirinha</h2>
                         <p>Цена: $149.99</p>
                     </div>
                     <button>Добавить в корзину</button>
                 </div>
+                <div class="item-1">
+                    <img src="../img/wine_for_sale_4.jpg" alt="Товар 1">
+                    <div class="item-info-1">
+                        <h2>Compasso Grande Escolha</h2>
+                        <p>Цена: $69.99</p>
+                    </div>
+                    <button>Добавить в корзину</button>
+                </div>
             </div>
+        </div>
+        <script src="../js/goToOtherPage.js"></script>
+        <div class="go-to-cheese-container">
+            <button class="go-to-cheese">Перейти к Сыру</button>
         </div>
     </main>
     <footer>

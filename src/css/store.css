@@ -60,7 +60,7 @@
 
 /* Стили для списков */
 .filter ul {
-    color: #00BFFF;
+    color: #fff;
     font-family: "Monotype Corsiva", cursive;
     list-style: none;
     padding: 0;
@@ -68,7 +68,7 @@
 }
 
 .filter ul li {
-    color: #00BFFF;
+    color: #FFF;
     margin-bottom: 5px;
     font-size: 16px;
 }
@@ -124,16 +124,17 @@ input[type="range"] {
 /* Стили для элементов товаров */
 .item-1 {
     display: inline-block;
-    margin: 20px;
+    margin: 10px;
     text-align: left;
     max-width: 40%; 
 }
 
 .item-1 img {
-    max-width: 50%;
+    max-width: 200px;
     height: auto;
     border-radius: 10px;
     margin-bottom: -20px;
+    margin-left: 20px;
 }
 
 .item-info-1 {
@@ -144,6 +145,8 @@ input[type="range"] {
 
 .item-1 h2 {
     margin: 0;
+    text-align: center;
+    display: block;
 }
 
 .item-1 p {
@@ -152,4 +155,28 @@ input[type="range"] {
 
 .item-1 button {
     width: 50%;
+}
+
+.go-to-cheese-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.go-to-cheese {
+    width: 200px;
+    height: 80px;
+    background-color: #00BFFF;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 55%;
+    transform: translateX(-50%);
+}
+
+.go-to-cheese:hover {
+    background-color: #1E90FF;
 }

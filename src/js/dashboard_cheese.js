@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var brandFilter = document.getElementById('brandFilter');
     var countryFilter = document.getElementById('countryFilter');
     var typeFilter = document.getElementById('typeFilter');
+    var typeFilter1 = document.getElementById('typeFilter1');
     var priceRange = document.getElementById('priceRange');
     var volumeRange = document.getElementById('volumeRange');
     var ratingFilter = document.getElementById('ratingFilter');
@@ -31,13 +32,8 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleFilter(typeFilter);
     });
 
-    yearRange.addEventListener('input', function () {
-        var yearValue = document.getElementById('yearValue');
-        yearValue.textContent = yearRange.value + ' - 2023'; 
-    });
-
-    yearRange.addEventListener('change', function () {
-        var selectedYear = yearRange.value;
+    typeFilter1.addEventListener('click', function () {
+        toggleFilter(typeFilter1);
     });
 
     priceRange.addEventListener('input', function () {
@@ -47,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     volumeRange.addEventListener('input', function () {
         var volumeValue = document.getElementById('volumeValue');
-        volumeValue.textContent = volumeRange.value + 'L';
+        volumeValue.textContent = volumeRange.value + 'гр';
     });
 
     function createStars() {

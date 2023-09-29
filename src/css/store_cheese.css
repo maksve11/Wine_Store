@@ -1,0 +1,91 @@
+.product-list-1 {
+    flex-grow: 1; 
+    padding: 0; 
+}
+
+/* Стили для контейнера */
+.product-list-1 {
+    text-align: left;
+    background-color: #fff;
+    margin-bottom: 0;
+}
+
+/* Стили для заголовков */
+.product-list-1 h1 {
+    font-size: 64px;
+    font-family: "Monotype Corsiva", cursive;
+    user-select: none;
+}
+
+.product-list-1 h2 {
+    font-size: 30px;
+    margin-top: 5px;
+    font-family: "Monotype Corsiva", cursive;
+    padding-top: 30px;
+    user-select: none;
+}
+
+/* Стили для элементов товаров */
+.item-2 {
+    display: inline-block;
+    margin: 10px;
+    text-align: left;
+    max-width: 40%; 
+}
+
+.item-2 img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: -40px;
+    margin-left: 10px;
+}
+
+.item-info-2 {
+    text-align: left;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.item-info-2 h2,
+.item-info-2 p,
+.item-2 button {
+    margin-bottom: 1px;
+    display: block;
+    text-align: left;
+}
+
+.item-info-2 h2 {
+    margin-bottom: -5%;
+}
+
+.item-2 button {
+    margin-top: 5%;
+    width: 60%;
+    text-align: center;
+}
+
+.go-to-wine-container {
+    position: relative;
+    width: 100%;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.go-to-wine {
+    width: 200px;
+    height: 80px;
+    background-color: #00BFFF;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 55%;
+    transform: translateX(-50%);
+}
+
+.go-to-wine:hover {
+    background-color: #1E90FF;
+}

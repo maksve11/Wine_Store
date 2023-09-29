@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         };
 
-        fetch('https://my-json-server.typicode.com/maksve11/Wine_Store/posts/', options)
+        fetch('https://my-json-server.typicode.com/maksve11/Wine_Store/posts', options)
             .then(function (response) {
                 if (response.ok) {
                     return response.json();

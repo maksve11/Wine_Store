@@ -5,12 +5,12 @@
     <meta name="keywords" content="алкоголь, интернет магазин, элитный алкоголь">
     <meta name="description" content="Интернет-магазин элитного алкоголя. Широкий ассортимент алкогольных напитков высокого качества. и немного сыра к нему">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorite</title>
+    <title>Store_Cheese</title>
     <link rel="stylesheet" type="text/css" href="../css/outlines.css">
-    <link rel="stylesheet" type="text/css" href="../css/favorite.css">
+    <link rel="stylesheet" type="text/css" href="../css/store.css">
+    <link rel="stylesheet" type="text/css" href="../css/store_cheese.css">
     <link rel="icon" href="../img/icon.jpeg" type="image/x-icon">
     <link rel="shortcut icon" href="../img/icon.jpeg" type="image/x-icon">
-    <script src="../js/generateItemForBasket.js"></script>
 </head>
 <body>
     <header>
@@ -36,7 +36,7 @@
                                 <a href="./contacts.html" class="menu-item-link">Контакты</a>
                             </li>
                             <li class="menu-item-type-page-id-104">
-                                <a href="./store.html" class="menu-item-link">Магазин</a>
+                                <a href="store.html" class="menu-item-link" aria-current="page">Магазин</a>
                             </li>
                         </ul>
                 </div>
@@ -47,7 +47,7 @@
             <a href="../index.html" class="menu-item-link">maksvell</a>
         </div>
         <div class="icons">
-            <a href="favorite.html" class="favorite-link">
+            <a href="./favorite.html" class="favorite-link">
                 <img src="../img/favorite.png" alt="Избранное">
             </a>
             <a href="#" class="shopping-basket-link">
@@ -68,8 +68,99 @@
         </div>
     </header>
     <main>
-        <div class="empty">
-            <p>Здесь пока ничего нет</p>
+        <script src="../js/dashboard_cheese.js"></script>
+        <div class="shop-container">
+            <aside class="dashboard">
+            <h2>Сортировка</h2>
+            <div class="filter" id="brandFilter">
+                <button id="brandButton">Бренд</button>
+                <ul id="brandList">
+                    <li><a href="#">ENDORF</a></li>
+                    <li><a href="#">Ранитель</a></li>
+                    <li><a href="#">Strahl</a></li>
+                    <li><a href="#">Ferma</a></li>
+                </ul>
+            </div>
+            <div class="filter" id="countryFilter">
+                <button id="countryButton">Страна Происхождения</button>
+                <ul id="countryList">
+                    <li><a href="#">Швейцария</a></li>
+                    <li><a href="#">Франция</a></li>
+                    <li><a href="#">Азербайджан</a></li>
+                    <li><a href="#">Россия</a></li>
+                </ul>
+            </div>
+            <div class="filter" id="typeFilter">
+                <button id="typeButton">Вид</button>
+                <ul id="typeList">
+                    <li><a href="#">Твердый</a></li>
+                    <li><a href="#">Полу-твердый</a></li>
+                    <li><a href="#">Мягкий</a></li>
+                </ul>
+            </div>
+            <div class="filter" id="typeFilter1">
+                <button id="typeButton_1">Молоко</button>
+                <ul id="typeList">
+                    <li><a href="#">Коровье</a></li>
+                    <li><a href="#">Козье</a></li>
+                    <li><a href="#">Овечье</a></li>
+                </ul>
+            </div>
+            <div class="filter">
+                <h3>Ценовой диапазон</h3>
+                <input type="range" min="10" max="500" step="10" id="priceRange">
+                <span id="priceValue">$10 - $500</span>
+            </div>
+            <div class="filter">
+                <h3>Граммовка</h3>
+                <input type="range" min="100" max="700" step="50" id="volumeRange">
+                <span id="volumeValue">100гр - 700гр</span>
+            </div>
+            <div class="filter" id="ratingFilter">
+                <h3>Рейтинг</h3>
+                <div id="ratingStars">
+                </div>
+            </div>
+            </aside>
+            <script src="../js/generateItemForBasket.js"></script>
+            <div class="product-list-1">
+                <div class="item-2">
+                    <img src="../img/cheese_1.jpg" alt="Товар 2">
+                    <div class="item-info-2">
+                        <h2>Диаболо Гурме</h2>
+                        <p>Цена: $99.99</p>
+                    </div>
+                    <button>Добавить в корзину</button>
+                </div>
+                <div class="item-2">
+                    <img src="../img/cheese_2.jpg" alt="Товар 2">
+                    <div class="item-info-2">
+                        <h2>Фьор де Альпи</h2>
+                        <p>Цена: $289.99</p>
+                    </div>
+                    <button>Добавить в корзину</button>
+                </div>
+                <div class="item-2">
+                    <img src="../img/cheese_3.jpg" alt="Товар 2">
+                    <div class="item-info-2">
+                        <h2>Альт Хекс</h2>
+                        <p>Цена: $39.99</p>
+                    </div>
+                    <button>Добавить в корзину</button>
+                </div>
+                <div class="item-2">
+                    <img src="../img/cheese_4.jpg" alt="Товар 2">
+                    <div class="item-info-2">
+                        <h2>Сыр Пикколо</h2>
+                        <p>Цена: $79.99</p>
+                    </div>
+                    <button>Добавить в корзину</button>
+                </div>
+            </div>
+        </div>
+        <script src="../js/goToOtherPage.js"></script>
+        <div class="go-to-wine-container">
+            <button class="go-to-wine">Перейти к Вину</button>
         </div>
     </main>
     <footer>

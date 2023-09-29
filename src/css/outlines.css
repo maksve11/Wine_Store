@@ -369,8 +369,11 @@ nav a {
 
 /* Стили для списка товаров в корзине */
 #basket-items {
-    list-style: none;
+    list-style: inline;
     padding: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Стили для элементов списка */
@@ -393,7 +396,41 @@ nav a {
 #basket-items li span {
     font-size: 18px;
     color: #4682B4;
-    margin-right: 20px;
+    margin-left: 15px;
+    text-align: left;
+}
+
+/* Стили для пустой корзины */
+.empty-basket {
+    padding: 2%;
+    user-select: none;
+    align-items: center;
+}
+
+.empty-basket p {
+    font-size: 18px;
+    color: #000; 
+}
+
+/* Стили для кнопки "Удалить товар" */
+.remove-item {
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    width: 20px; 
+    height: 20px;
+    padding: 5%;
+    margin-left: 5px;
+    background-image: url('../img/delete-button.png'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+/* Стили для кнопки "Удалить товар" при наведении */
+.remove-item:hover {
+    background-color: #dff5f0;
 }
 
 /* Стили для кнопки закрытия модального окна */
