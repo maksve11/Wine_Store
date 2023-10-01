@@ -65,7 +65,7 @@
     text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     .shop-container {
         flex-direction: column;
         margin-bottom: 30%;
