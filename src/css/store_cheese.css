@@ -65,6 +65,78 @@
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .shop-container {
+        flex-direction: column;
+        margin-bottom: 30%;
+    }
+
+    .dashboard {
+        width: 60%; 
+        position: static;
+        padding: 10px; 
+        margin-left: 20%;
+    }
+
+    .filter button {
+        width: auto;
+    }
+
+    .filter ul {
+        background-color: #fff;
+    }
+
+    .filter ul li {
+        margin-left: 10px;
+    }
+
+    .filter ul {
+        display: none;
+    }
+
+    .filter button.active + ul {
+        display: block;
+    }
+
+    .product-list-1 {
+        margin-top: 20px;
+    }
+
+    .item-2 {
+        max-width: 100%;  
+        margin-left: 20%;
+    }
+
+    .item-2 img {
+        width: 80%; 
+        max-width: none; 
+        margin: 0 auto; 
+        margin-bottom: -10%;
+    }
+
+    .item-2 p {
+        text-align: center;
+        margin-right: 20%;
+    }
+
+    .item-2 button {
+        margin-top: 2%;
+        width: 60%;
+        margin-left: 10%;
+    }
+
+    .item-info-2 {
+        text-align: center;
+        align-items: center;
+    }
+
+    .item-2 h2 {
+        margin-right: 20%;
+        text-align: center;
+        margin-bottom: -2%;
+    }
+}
+
 .go-to-wine-container {
     position: relative;
     width: 100%;

@@ -248,7 +248,8 @@ header {
     padding: 0;
     color: #00CED1;
     user-select: none;
-    margin-right: 200px; 
+    margin-right: 20px; 
+    margin-left: -30%;
     min-width: 100px;
     align-items: center;
     justify-content: center;
@@ -292,7 +293,7 @@ nav a {
     text-decoration: none;
     color: #333; 
     text-align: center;
-    margin: 0 20px; 
+    margin: 0 10px; 
     position: relative; 
 }
 
@@ -388,7 +389,7 @@ nav a {
 #basket-items img {
     max-width: 100px;
     max-height: 100px;
-    margin-left: 40px; 
+    margin-left: 20px; 
     vertical-align: middle;
 }
 
@@ -464,6 +465,32 @@ header h1 {
     font-size: 36px;
 }
 
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 36px; 
+        margin-right: 10px; 
+        margin-left: -5%;
+    }
+
+    .modal {
+        width: 50%;
+    }
+
+    .favorite-link,
+    .shopping-basket-link {
+        margin: 0 5px;
+    }
+
+    .modal-content h2,
+    .modal-content ul li {
+        font-size: 16px;
+    }
+
+    #basket-items img {
+        margin-left: 10px;
+    }
+}
+
 /* Стили для main */
 main {
     padding: 20px;
@@ -489,6 +516,13 @@ main {
     text-align: center; 
 }
 
+@media screen and (max-width: 768px) {
+    .slide {
+        font-size: 6px; 
+        padding: 5px;
+    }
+}
+
 /* Стиль для виджета */
 .widget-content {
     display: flex;
@@ -506,7 +540,7 @@ main {
 /* Стиль для изображения в виджете */
 .widget-image {
     width: 100%; 
-    height: 720px; 
+    max-height: 768px;
     object-fit: cover; 
     filter: blur(5px); 
 }
@@ -539,6 +573,27 @@ main {
     margin-bottom: 20px;
 }
 
+@media screen and (max-width: 768px) {
+    .widget-content {
+        margin-top: 5%;
+        margin-bottom: 2%;        
+    }
+
+    .widget-title {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .widget-text {
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+
+    .widget-image {
+        height: 480px;
+    }
+}
+
 /* Стиль для контейнера виджета */
 .widget-content-2 {
     display: grid;
@@ -558,6 +613,13 @@ main {
 /* Добавляем размытие при наведении */
 .widget-content-2:hover {
     filter: none; 
+}
+
+/* Стиль для текста внутри правого столбца */
+.widget-content-2 .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
 }
 
 /* Стиль для заголовка группы услуг */
@@ -586,6 +648,25 @@ main {
     font-size: 24px;
 }
 
+@media screen and (max-width: 768px) {
+    .right-column {
+        margin-left: 0;
+    }
+
+    .widget-content-2 {
+        margin-top: 6%;
+    }
+    
+    .service-heading {
+        margin-top: 10%;
+        font-size: 24px;
+    }
+    
+    .service-name {
+        font-size: 18px;
+    }
+}
+
 /* Стили для контейнера */
 .featured-items-container {
     text-align: center;
@@ -603,16 +684,16 @@ main {
 
 /* Стили для заголовков */
 .featured-items-container h1 {
-    font-size: 64px;
+    font-size: 42px;
     font-family: "Monotype Corsiva", cursive;
     user-select: none;
 }
 
 .featured-items-container h2 {
-    font-size: 30px;
+    font-size: 24px;
     margin-top: 5px;
     font-family: "Monotype Corsiva", cursive;
-    padding-top: 30px;
+    padding-top: 20px;
     user-select: none;
 }
 
@@ -626,9 +707,9 @@ main {
 
 .item img {
     max-width: 100%;
-    height: 540px;
+    height: auto;
     border-radius: 10px;
-    margin-bottom: -20px;
+    margin-bottom: 10px;
 }
 
 .item-info {
@@ -692,23 +773,37 @@ button:hover {
 
 /* Стили для текста цитаты */
 .quote p {
-    font-size: 36px; 
+    font-size: 32px; 
     font-family: "Monotype Corsiva", cursive; 
     margin: 0; 
-    padding: 20px; 
+    padding: 10px; 
 }
 
 .quote strong {
     display: block; 
-    font-size: 54px; 
+    font-size: 42px; 
     font-family: "Monotype Corsiva", cursive;
-    margin-bottom: 20px; 
+    margin-bottom: 10px; 
 }
 
 .quote em {
     font-family: "Monotype Corsiva", monospace;
     font-style: italic; 
-    font-size: 36px; 
+    font-size: 28px; 
+}
+
+@media screen and (max-width: 768px) { 
+    .quote p {
+        font-size: 24px;
+    }
+
+    .quote strong {
+        font-size: 36px;
+    }
+
+    .quote em {
+        font-size: 24px;
+    }
 }
 
 /* Стили для footer-контейнера */
@@ -755,4 +850,10 @@ footer {
     width: 70px; 
     height: 70px;
     margin-left: 5px; 
+}
+
+@media screen and (max-width: 768px) { 
+    .footer-center {
+        font-size: 12px;
+    }
 }

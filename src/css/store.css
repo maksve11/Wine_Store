@@ -157,6 +157,69 @@ input[type="range"] {
     width: 50%;
 }
 
+@media (max-width: 768px) {
+    .shop-container {
+        flex-direction: column;
+        margin-bottom: 30%;
+    }
+
+    .dashboard {
+        width: 60%; 
+        position: static;
+        padding: 10px; 
+        margin-left: 20%;
+    }
+
+    .filter button {
+        width: auto;
+    }
+
+    .filter ul {
+        background-color: #fff;
+    }
+
+    .filter ul li {
+        margin-left: 10px;
+    }
+
+    .filter ul {
+        display: none;
+    }
+
+    .filter button.active + ul {
+        display: block;
+    }
+
+    .product-list {
+        margin-top: 20px;
+    }
+
+    .item-1 {
+        max-width: 100%; 
+        margin: 10px 0; 
+        margin-left: 20%;
+    }
+
+    .item-1 img {
+        width: 100%; 
+        max-width: none; 
+        margin: 0 auto; 
+    }
+
+    .item-1 button {
+        margin-left: 20%;
+        width: 60%;
+    }
+
+    .item-info-1 {
+        text-align: center;
+    }
+
+    .item-1 h2 {
+        text-align: center;
+    }
+}
+
 .go-to-cheese-container {
     position: relative;
     width: 100%;

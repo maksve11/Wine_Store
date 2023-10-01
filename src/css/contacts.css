@@ -60,6 +60,16 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 768px) {
+    .info-form-title {
+        font-size: 28px;
+    }
+
+    .info-form-text {
+        font-size: 20px;
+    }
+}
+
 /* Стиль для полей ввода и меток */
 .info-form label {
     font-family: "Monotype Corsiva", monospace;
