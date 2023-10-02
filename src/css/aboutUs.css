@@ -370,4 +370,8 @@
     .subscribe-email button {
         margin-left: -10%;
     }
+
+    .loader {
+        
+    }
 }

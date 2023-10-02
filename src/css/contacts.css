@@ -3,12 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 24px;
+    padding: 0px;
     width: 100%; 
-    margin: 0 auto;
     text-align: center;
     position: relative; 
-    left: -20px; 
+    left: 0px; 
     user-select: none;
 }
 
@@ -64,9 +63,9 @@
 .loader-form {
     position: absolute;
     top: 0;
-    margin-left: 20%;
     width: auto;
     height: 100%;
+    margin-left: 20%;
     background-color: #f0f0f0; 
     display: none; 
     z-index: 2; 
@@ -84,8 +83,8 @@
     animation: spin 1s linear infinite;
     position: absolute;
     top: 50%;
-    left: 70%;
-    transform: translate(-50%, -70%);
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes spin {
@@ -100,6 +99,10 @@
 
     .info-form-text {
         font-size: 20px;
+    }
+
+    .loader-form {
+        margin-left: 50%;
     }
 }
 
