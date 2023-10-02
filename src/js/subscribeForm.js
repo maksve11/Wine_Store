@@ -5,9 +5,17 @@ document.addEventListener('DOMContentLoaded', function () {
     var phoneInput = document.getElementById('phone');
     var notesInput = document.getElementById('notes');
     var errorMessage = document.querySelector('.error-message');
+    var loader = document.querySelector('.loader-form');
+    var submitButton = contactForm.querySelector('button');
+
+    var isSubmitting = false; 
     
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
+
+        if (isSubmitting) {
+            return;
+        }
     
         var name = nameInput.value;
         var email = emailInput.value;
@@ -36,6 +44,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 'Content-Type': 'application/json',
             },
         };
+
+        isSubmitting = true;
+        loader.style.display = 'block';
+        submitButton.disabled = true;
     
         fetch('https://my-json-server.typicode.com/maksve11/Wine_Store/posts', options)
             .then(function (response) {
@@ -55,6 +67,11 @@ document.addEventListener('DOMContentLoaded', function () {
             .catch(function (error) {
                 console.error(error);
                 errorMessage.textContent = 'Произошла ошибка при отправке данных.';
+            })
+            .finally(function () {
+                isSubmitting = false; 
+                loader.style.display = 'none';
+                submitButton.disabled = false;
             });
     });
 });
