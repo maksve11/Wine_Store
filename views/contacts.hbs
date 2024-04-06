@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Contacts</title>
+  {{> styles}}
+  {{> scripts}}
+  {{> head}}
+  {{> session}}
+</head>
+<body>
+{{> header}}
+<main>
+  <div class="contacts-form-content">
+    <img src="./img/contacts_form.jpg" alt="Картинка" class="contacts-form-image">
+    <div class="info-form">
+      <h1 class="info-form-title">Есть вопросы?</h1>
+      <p class="info-form-text">Свяжитесь с нами, когда у вас возникнут вопросы. Мы всегда здесь для тебя!</p>
+      <form id="contact-form">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+        <label for="email">Email:</label>
+        <input type="email-form" id="email-form" name="email" placeholder="example@example.com" required>
+
+        <label for="phone">Телефон:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Введите 10 цифр без разделителей" pattern="[0-9]{10}" required>
+
+        <label for="notes">Заметки:</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Введите ваши заметки"></textarea>
+
+        <button type="submit">Отправить</button>
+        <div class="loader-form" id="loader-form"></div>
+      </form>
+    </div>
+  </div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.288577779988!2d-0.07841242381560404!3d51.54460720798509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761c921bd4f76b%3A0xf0764585f21c59aa!2sWine%20Cellar!5e0!3m2!1sru!2sru!4v1695589445446!5m2!1sru!2sru" width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="contact-info">
+    <div class="contact-info-left">
+      <h1>Адрес</h1>
+      <h3>Мы рады встрече с вами! Не стесняйтесь связаться с нами в эти рабочие часы.</h3>
+      <h2>Электронная почта</h2>
+      <h3>maksvell@niuitmo.ru</h3>
+      <h2>Телефон</h2>
+      <h3>+1 234 567 8900</h3>
+      <h2>Адрес</h2>
+      <h3>Стрэнд, Лондон WC2R 2LS, Великобритания</h3>
+    </div>
+    <div class="contact-info-right">
+      <h1>Рабочее время</h1>
+      <h2>Понедельник</h2>
+      <h3>09:00 - 19:30</h3>
+      <h2>Вторник</h2>
+      <h3>09:00 - 19:30</h3>
+      <h2>Среда</h2>
+      <h3>09:00 - 19:30</h3>
+      <h2>Четверг</h2>
+      <h3>09:00 - 19:30</h3>
+      <h2>Пятница</h2>
+      <h3>09:00 - 19:30</h3>
+      <h2>Суббота</h2>
+      <h3>09:00 - 19:30</h3>
+      <h2>Воскресенье</h2>
+      <h3>09:00 - 19:30</h3>
+    </div>
+  </div>
+  <div class="subscribe-container">
+    <div class="subscribe-text">
+      <h2>Подпишись</h2>
+      <h1>Хотите быть в курсе? Подпишитесь на рассылку, чтобы получать все новости и еженедельные обновления.</h1>
+    </div>
+    <form class="subscribe-email" id="subscribe-form-email">
+      <input type="email" id="email" placeholder="email">
+      <button id="subscribe-button" type="submit">
+        <span class="loader"></span>
+        <img src="./img/send.png" alt="Отправить">
+      </button>
+      <span class="error-message">Неверный формат email</span>
+    </form>
+  </div>
+</main>
+{{> footer}}
+</body>
+</html>

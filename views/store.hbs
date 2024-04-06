@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Store</title>
+  {{> styles}}
+  {{> scripts}}
+  {{> head}}
+  {{> session}}
+</head>
+<body>
+{{> header}}
+<main>
+  <div class="shop-container">
+    <aside class="dashboard">
+      <h2>Сортировка</h2>
+      <div class="filter" id="brandFilter">
+        <button id="brandButton">Бренд</button>
+        <ul id="brandList">
+          <li><a href="#">Barefoot</a></li>
+          <li><a href="#">Concha y Toro</a></li>
+          <li><a href="#">Gallo</a></li>
+          <li><a href="#">Changyu</a></li>
+          <li><a href="#">Yellow Tail</a></li>
+        </ul>
+      </div>
+      <div class="filter" id="countryFilter">
+        <button id="countryButton">Страна Происхождения</button>
+        <ul id="countryList">
+          <li><a href="#">Франция</a></li>
+          <li><a href="#">Италия</a></li>
+          <li><a href="#">Испания</a></li>
+          <li><a href="#">Россия</a></li>
+        </ul>
+      </div>
+      <div class="filter" id="typeFilter">
+        <button id="typeButton">Вид</button>
+        <ul id="typeList">
+          <li><a href="#">Красное</a></li>
+          <li><a href="#">Белое</a></li>
+        </ul>
+      </div>
+      <div class="filter">
+        <h3>Год</h3>
+        <input type="range" min="1780" max="2022" step="2" id="yearRange">
+        <span id="yearValue">1780 - 2023</span>
+      </div>
+      <div class="filter">
+        <h3>Ценовой диапазон</h3>
+        <input type="range" min="10" max="1000" step="10" id="priceRange">
+        <span id="priceValue">$10 - $1000</span>
+      </div>
+      <div class="filter">
+        <h3>Объем</h3>
+        <input type="range" min="0.7" max="3" step="0.1" id="volumeRange">
+        <span id="volumeValue">0.7L - 3L</span>
+      </div>
+      <div class="filter" id="ratingFilter">
+        <h3>Рейтинг</h3>
+        <div id="ratingStars">
+        </div>
+      </div>
+    </aside>
+    <div class="product-list">
+      <div class="item-1">
+        <img src="./img/wine_for_sale.jpg" alt="Товар 1">
+        <div class="item-info-1">
+          <h2>Terras De Santa Maria</h2>
+          <p>Цена: $99.99</p>
+        </div>
+        <button>Добавить в корзину</button>
+      </div>
+      <div class="item-1">
+        <img src="./img/wine_for_sale_1.jpg" alt="Товар 1">
+        <div class="item-info-1">
+          <h2>Rongopai Marlboro</h2>
+          <p>Цена: $169.99</p>
+        </div>
+        <button>Добавить в корзину</button>
+      </div>
+      <div class="item-1">
+        <img src="./img/wine_for_sale_3.jpg" alt="Товар 2">
+        <div class="item-info-1">
+          <h2>Abrigo Da Ribeirinha</h2>
+          <p>Цена: $149.99</p>
+        </div>
+        <button>Добавить в корзину</button>
+      </div>
+      <div class="item-1">
+        <img src="./img/wine_for_sale_4.jpg" alt="Товар 1">
+        <div class="item-info-1">
+          <h2>Compasso Grande Escolha</h2>
+          <p>Цена: $69.99</p>
+        </div>
+        <button>Добавить в корзину</button>
+      </div>
+    </div>
+  </div>
+  <div class="go-to-cheese-container">
+    <button class="go-to-cheese">Перейти к Сыру</button>
+  </div>
+</main>
+{{> footer}}
+</body>
+</html>

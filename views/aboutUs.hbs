@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>About us</title>
+  {{> styles}}
+  {{> scripts}}
+  {{> head}}
+  {{> session}}
+</head>
+<body>
+{{> header}}
+<main>
+  <div class="about-us-container">
+    <img src="./img/about_us_img.jpg" class="about-us-img">
+  </div>
+  <div class="formula">
+    <p><sup>Прилагаемый труд</sup>×<sub>Страсть</sub> + <strong>Талант</strong> - <del>Сомнение</del> = <sup>Успех</sup></p>
+  </div>
+  <div class="about-us-container-1">
+    <section class="about-us-text">
+      <h1>О нас</h1>
+      <p>Откройте для себя мир изысканных вин и попробуйте вкусы самых известных виноделен в нашем эксклюзивном винном магазине! Благодаря обширному выбору красных, белых, розовых и других сортов вина, мы гарантируем, что вы найдете что-то, что придется по вкусу вашим вкусовым рецепторам.</p>
+    </section>
+    <div class="about-us-images">
+      <div class="image-pair">
+        <img src="./img/vino3.jpg" alt="Изображение 1">
+        <img src="./img/vino2.jpg" alt="Изображение 2">
+      </div>
+      <div class="image-pair">
+        <img src="./img/vino1.jpg" alt="Изображение 3">
+        <img src="./img/vino4.jpg" alt="Изображение 4">
+      </div>
+    </div>
+  </div>
+  <div class="slider-container-about-us">
+    <h2>Найди лучшее вино</h2>
+    <div class="slider-about-us">
+      <div class="slide-about-us">
+        <img src="./img/slider_image_1.jpg" alt="Wine 1">
+      </div>
+      <div class="slide-about-us">
+        <img src="./img/slider_image_2.jpg" alt="Wine 2">
+      </div>
+      <div class="slide-about-us">
+        <img src="./img/slider_image_3.jpg" alt="Wine 3">
+      </div>
+      <div class="slide-about-us">
+        <img src="./img/slider_image_4.jpg" alt="Wine 4">
+      </div>
+      <div class="slide-about-us">
+        <img src="./img/slider_image_5.jpg" alt="Wine 5">
+      </div>
+      <div class="slide-about-us">
+        <img src="./img/slider_image_6.jpg" alt="Wine 6">
+      </div>
+      <div class="slide-about-us">
+        <img src="./img/slider_image_7.jpg" alt="Wine 7">
+      </div>
+      <div class="slide-about-us">
+        <img src="./img/slider_image_8.jpg" alt="Wine 8">
+      </div>
+    </div>
+  </div>
+  <div class="subscribe-container">
+    <div class="subscribe-text">
+      <h2>Подпишись</h2>
+      <h1>Хотите быть в курсе? Подпишитесь на рассылку, чтобы получать все новости и еженедельные обновления.</h1>
+    </div>
+    <form class="subscribe-email" id="subscribe-form-email">
+      <input type="email" id="email" placeholder="email">
+      <button id="subscribe-button" type="submit">
+        <span class="loader"></span>
+        <img src="./img/send.png" alt="Отправить">
+      </button>
+      <span class="error-message">Неверный формат email</span>
+    </form>
+  </div>
+</main>
+{{> footer}}
+</body>
+</html>

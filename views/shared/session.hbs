@@ -1,0 +1,18 @@
+<<script src="js/register.js"></script>
+<div class="session-info">
+  {{#if isAuthorized}}
+    <p>Вы вошли как: {{user.name}}</p>
+    <a href="/logout">Выйти</a>
+  {{else}}
+    {{#if showLogin}}
+      <form id="login-form">
+        <input type="text" name="username" placeholder="Логин">
+        <input type="password" name="password" placeholder="Пароль">
+        <button type="submit">Войти</button>
+      </form>
+      <p><a href="/register" id="show-register">Зарегистрироваться</a></p>
+    {{else}}
+      <a href="/login">Войти</a> или <a href="/register" id="show-register">Зарегистрироваться</a>
+    {{/if}}
+  {{/if}}
+</div>
